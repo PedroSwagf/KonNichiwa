@@ -2,6 +2,7 @@
 import os
 import time
 
+
 os.system("cls")
 os.system("color B")
 #Definimos las clases para las tareas
@@ -65,6 +66,10 @@ def main():
     gestor = GestorTareas()
 
     while True:
+        print("")
+        print("")
+        print("")
+        print("")
         print("                                       ╔════════════════════════════════╗")
         print("                                       ║ Opciones a realizar:           ║")
         print("                                       ║════════════════════════════════║")
@@ -77,6 +82,8 @@ def main():
 
         print("")
         print("")
+        print("")
+        
         opcion = input("Seleccione una opcion: ")
 
         if opcion == "1":
@@ -91,10 +98,15 @@ def main():
             posicion = int(input("Ingrese la posicion de la tarea a eliminar: "))
             gestor.eliminar_tareas(posicion)
         elif opcion == "5":
-            print("¡Hasta luego!")
+            print("¡Good Bye!")
+            time.sleep(2)
+            os.system("cls")
+            os.system("Color F")
             break
         else:
+            os.system("Color D")
             print("Opcion no valida Intentelo de nuevo.")
-
+            time.sleep(2)
+            os.system("Color B")
 if __name__ == "__main__":
     main()
