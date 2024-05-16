@@ -1,12 +1,6 @@
-#definicion de los codigos para colores 
-
-class Color:
-    Reset = "\033[0m"
-    Green = "\033[32m"
-    Red = "\033[31m"
-    Yellow = "\033[33m"
-    Blue = '\033[94m'
-    
+import os
+import time
+os.system("color B")
 #Definimos las clases para las tareas
 class Tarea:
     def __init__(self, descripcion, completada=False):
@@ -20,19 +14,23 @@ class GestorTareas:
     def agregar_tareas(self, descripcion):
         tarea = Tarea(descripcion)
         self.tareas.append(tarea)
-        print(Color.Blue + "Tarea agregada correctamente." + Color.Reset)
+        print("Tarea agregada correctamente.")
 
     def marcar_completadas(self, posicion):
         try:
             tarea = self.tareas[posicion]
             tarea.completada = True
-            print(Color.Green + "La Tarea se marco como completada correctamente.")
+            print("La Tarea se marco como completada correctamente.")
         except IndexError:
-            print(Color.Red + "La posicion especificada no existe." + Color.Reset)
-
+            os.system("color 5")
+            print("La posicion especificada no existe.")
+            time.sleep(10)
+            os.system("color 7")
     def mostrar_tareas(self):
         if not self.tareas:
-            print(Color.Yellow + "No hay tareas pendientes." + Color.Reset)
+            os.system("color 4")
+            print("No hay tareas pendientes.")
+            os.system("color B")
         else:
             for i, tarea in enumerate(self.tareas):
                 estado = "Completada" if tarea.completada else "Pendiente"
@@ -41,9 +39,9 @@ class GestorTareas:
     def eliminar_tareas(self, posicion):
         try:
             del self.tareas[posicion]
-            print(Color.Green +"Tarea eliminada correctamente." + Color.Reset)
+            print("Tarea eliminada correctamente.")
         except IndexError:
-            print(Color.Red + "La posicion especificada no existe." + Color.Reset)
+            print("La posicion especificada no existe.")
 
 # Funcion principal para interactuar con el usuario
 def main():
@@ -80,7 +78,7 @@ def main():
             print("¡Hasta luego!")
             break
         else:
-            print(Color.Red + "Opcion no valida Intentelo de nuevo." + Color.Reset)
+            print("Opcion no valida Intentelo de nuevo.")
 
 if __name__ == "__main__":
     main()
