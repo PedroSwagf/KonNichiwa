@@ -1,11 +1,13 @@
-#importamos las variables de sistema
+#importamos los modulos de sistema
 import os
 import time
 
-
+#ponemos los comando spara limpiar la consola y cambiarle el color de la misma
 os.system("cls")
 os.system("color B")
+
 #Definimos las clases para las tareas
+
 class Tarea:
     def __init__(self, descripcion, completada=False):
         self.descripcion = descripcion
