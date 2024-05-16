@@ -68,7 +68,7 @@ def main():
     gestor = GestorTareas()
 
     while True:
-        print("")
+        print("Kon'nichiwa")
         print("")
         print("")
         print("")
@@ -100,7 +100,7 @@ def main():
             posicion = int(input("Ingrese la posicion de la tarea a eliminar: "))
             gestor.eliminar_tareas(posicion)
         elif opcion == "5":
-            print("¡Good Bye!")
+            print("¡Sayonara!")
             time.sleep(2)
             os.system("cls")
             os.system("Color F")
