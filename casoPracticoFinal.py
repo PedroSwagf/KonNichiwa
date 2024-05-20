@@ -27,7 +27,7 @@ class GestorTareas:
             time.sleep(2)                                               #hacemos una pause de 2 segundos
             os.system("Color B")                                        #ponemos el color de la consola como en el inicio del programa
         except IndexError:
-            os.system("Color D")                                        #cambiamos el color a rojo si hubo un problema simulando que fuera un mensaje de advertencia
+            os.system("Color D")                                        #cambiamos el color a purpura si hubo un problema simulando que fuera un mensaje de advertencia
             print("No se pudo agregar la tarea.")                       #lanzamos esta excepcion en casa de que pase algo y no se pueda agregar correctamente la tarea.
             time.sleep(2)                                               #hacemos una pause de 2 segundos
             os.system("Color B")                                        #ponemos el color de la consola como en el inicio del programa
